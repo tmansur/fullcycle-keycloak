@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:21.1
+    command: start-dev #Configurações para o KC em dev
+    ports:
+      - 8080:8080
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+
+
+# Subir o kc: docker compose up
+# Acessar o kc: localhost:8080
